@@ -30,46 +30,46 @@ Level 1:
 
 import random, string
 
-# def random_user_id():
-#     characters = string.ascii_letters + string.digits
-#     print(characters)
-#     user_id = ''
+def random_user_id():
+    characters = string.ascii_letters + string.digits
+    print(characters)
+    user_id = ''
 
-#     for _ in range(6):
-#         random_char = random.choice(characters)
-#         user_id = user_id + random_char
+    for _ in range(6):
+        random_char = random.choice(characters)
+        user_id = user_id + random_char
 
-#     return user_id
-
-
-# print(random_user_id())
+    return user_id
 
 
-# def user_id_gen_by_user():
-#     num_chars = int(input("Enter the number of characters for each ID: "))
-#     num_ids = int(input("Enter the number of IDs to generate: "))
-
-#     characters = string.ascii_letters + string.digits
-
-#     for _ in range(num_ids):
-#         user_id = ''
-#         for _ in range(num_chars):
-#             user_id = user_id + random.choice(characters)
-#         print(user_id)
+print(random_user_id())
 
 
-# user_id_gen_by_user()
+def user_id_gen_by_user():
+    num_chars = int(input("Enter the number of characters for each ID: "))
+    num_ids = int(input("Enter the number of IDs to generate: "))
+
+    characters = string.ascii_letters + string.digits
+
+    for _ in range(num_ids):
+        user_id = ''
+        for _ in range(num_chars):
+            user_id = user_id + random.choice(characters)
+        print(user_id)
 
 
-# def rgb_color_gen():
+user_id_gen_by_user()
 
-#     r = random.randint(0, 255)
-#     g = random.randint(0, 255)
-#     b = random.randint(0, 255)
 
-#     return f"rgb({r},{g},{b})"
+def rgb_color_gen():
 
-# print(rgb_color_gen())
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+
+    return f"rgb({r},{g},{b})"
+
+print(rgb_color_gen())
 
 
 
@@ -88,67 +88,67 @@ import random, string
     generate_colors('rgb', 1)  # ['rgb(33,79, 176)']
 """
 
-# def list_of_hexa_colors():
-#     num_colors = int(input("Enter the number of hex colors to generate: "))
+def list_of_hexa_colors():
+    num_colors = int(input("Enter the number of hex colors to generate: "))
 
-#     hex_chars = '0123456789abcdef'
+    hex_chars = '0123456789abcdef'
 
-#     colors_list = []
+    colors_list = []
 
-#     for _ in range(num_colors):
-#         hex_color = '#'
+    for _ in range(num_colors):
+        hex_color = '#'
 
-#         for _ in range(6):
-#             hex_color += random.choice(hex_chars)
+        for _ in range(6):
+            hex_color += random.choice(hex_chars)
 
-#         colors_list.append(hex_color)
+        colors_list.append(hex_color)
 
-#     return colors_list
+    return colors_list
 
-# print(list_of_hexa_colors())
+print(list_of_hexa_colors())
 
-# def list_of_rgb_colors():
-#     num_of_colors = int(input("Enter number of rgb colors: "))
+def list_of_rgb_colors():
+    num_of_colors = int(input("Enter number of rgb colors: "))
 
-#     rgb_colors = []
-#     for _ in range(num_of_colors):
-#         r = random.randint(0, 255)
-#         g = random.randint(0, 255)
-#         b = random.randint(0, 255)
-#         rgb_colors.append(f"rgb({r},{g},{b})")
+    rgb_colors = []
+    for _ in range(num_of_colors):
+        r = random.randint(0, 255)
+        g = random.randint(0, 255)
+        b = random.randint(0, 255)
+        rgb_colors.append(f"rgb({r},{g},{b})")
 
-#     return rgb_colors
+    return rgb_colors
 
-# print(list_of_rgb_colors())
+print(list_of_rgb_colors())
 
 
-# def generate_colors(color_type, color_quantity):
+def generate_colors(color_type, color_quantity):
 
-#     list_of_colors = []
-#     if color_type == 'hexa':
-#         # Generates hexa colors.
-#         characters = '123456789abcdef'
+    list_of_colors = []
+    if color_type == 'hexa':
+        # Generates hexa colors.
+        characters = '123456789abcdef'
 
         
-#         for _ in range(color_quantity):
+        for _ in range(color_quantity):
             
-#             color = ''
-#             for _ in range(6):
-#                 color += random.choice(characters)
-#             list_of_colors.append("#"+color)
-#     elif color_type == 'rgb':
+            color = ''
+            for _ in range(6):
+                color += random.choice(characters)
+            list_of_colors.append("#"+color)
+    elif color_type == 'rgb':
         
-#         for _ in range(color_quantity):
-#             r = random.randint(0, 255)
-#             g = random.randint(0, 255)
-#             b = random.randint(0, 255)
+        for _ in range(color_quantity):
+            r = random.randint(0, 255)
+            g = random.randint(0, 255)
+            b = random.randint(0, 255)
             
-#             list_of_colors.append(f"rgb({r},{g},{b})")            
+            list_of_colors.append(f"rgb({r},{g},{b})")            
     
-#     print(list_of_colors)
+    print(list_of_colors)
 
-# generate_colors('hexa', 3)
-# generate_colors('rgb', 2)
+generate_colors('hexa', 3)
+generate_colors('rgb', 2)
 
 """
 30DaysPythonChallenge: Level 3
